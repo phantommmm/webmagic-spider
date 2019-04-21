@@ -18,10 +18,7 @@ import java.util.List;
 import java.util.Random;
 
 public class MySpider extends Spider {
-    String userAgents[]={"Mozilla/5.0 (Windows NT 7.8; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3497.100 Safari/537.36",
-            "Mozilla/5.0 (Windows NT 6.6; Win64; x64; rv:66.0) Gecko/20100101 Firefox/63.0",
-            "Mozilla/5.0 (Windows NT 9.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3325.181 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 5.9; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"};
+    
 
     private DataBase dataBase=null;
 
@@ -31,13 +28,11 @@ public class MySpider extends Spider {
         dataBase=new DataBase();
 
 
-        //随机    设置代理
+        
 
-        HttpClientDownloader proxy=new HttpClientDownloader();
+    HttpClientDownloader proxy=new HttpClientDownloader();
 
     proxy.setProxyProvider(SimpleProxyProvider
-            //.from(new Proxy("125.105.189.177",9999)
-                    //,new Proxy("163.204.241.178",9999)));
             .from(randomProxy()
                     ,randomProxy()
                     ,randomProxy()
@@ -59,7 +54,9 @@ public class MySpider extends Spider {
         Proxy p = new Proxy(ip, port);
         return p;
     }
-
+/*
+	设置随机UserAgent
+ */
     private String randomUserAgent(){
         List<String> list=readUserAgent();
         Random random = new Random();
@@ -78,10 +75,6 @@ public class MySpider extends Spider {
 
     private List<String> readPool() {
         List<String> list=new ArrayList<>();
-        /* 读入TXT文件 */
-        // String pathname = "trainData.txt"; //
-        // 绝对路径或相对路径都可以，这里是绝对路径，写入文件时演示相对路径
-        // File filename = new File(pathname); // 要读取以上路径的input。txt文件
         try {
             File file=new File("config/pool.txt");
             InputStreamReader reader = new InputStreamReader(new FileInputStream(file)); // 建立一个输入流对象reader
@@ -101,10 +94,6 @@ public class MySpider extends Spider {
 
     private List<String> readUserAgent() {
         List<String> list=new ArrayList<>();
-        /* 读入TXT文件 */
-        // String pathname = "trainData.txt"; //
-        // 绝对路径或相对路径都可以，这里是绝对路径，写入文件时演示相对路径
-        // File filename = new File(pathname); // 要读取以上路径的input。txt文件
         try {
             File file=new File("config/useragent.txt");
             InputStreamReader reader = new InputStreamReader(new FileInputStream(file)); // 建立一个输入流对象reader

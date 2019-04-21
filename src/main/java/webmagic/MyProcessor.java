@@ -13,7 +13,6 @@ public class MyProcessor implements PageProcessor {
 
     private Site site   = Site.me()
             .setRetryTimes(3)
-            //.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36")
             .setCharset("UTF-8")
             .addHeader("Host", "www.zhihu.com")
             .setTimeOut(10000)
@@ -50,7 +49,7 @@ public class MyProcessor implements PageProcessor {
  */
     private void setJsonInfo(Page page){
         if (page.getHtml().css("div.Unhuman").match()) {
-            System.out.println("账号/ip被封,暂停程序!!!");// 账号/ip被封,终止程序
+            System.out.println("账号/ip被封,暂停程序!!!");// 账号/ip被封,暂停程序
             try {
                 Random random=new Random();
                 Thread.sleep(10000+random.nextInt(25000));

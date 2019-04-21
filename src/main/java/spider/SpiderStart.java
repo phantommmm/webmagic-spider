@@ -61,7 +61,7 @@ public class SpiderStart {
         mySpider=new MySpider(myProcessor);
         oldCount=mySpider.count();
         System.out.println("Starting...");
-        //从这里开始爬
+        //从这里开始爬  用户可以随便选
         mySpider.addUrl("https://www.zhihu.com/people/jason_wang_2018/activities")
                 .setDownloader(new MyDownloader(mySpider))
                 .setScheduler(new FileCacheQueueScheduler("logs")) //www.zhihu.com.urls.txt
