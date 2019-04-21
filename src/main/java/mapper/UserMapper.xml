@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 写Sql语句   -->
+<mapper namespace="mapper.UserMapper">
+    <!-- 添加用户 -->
+    <insert id="add" parameterType="domain.User">
+        insert into zhihuuser (ID, Name, Sex, Introduction, School, Company, Job, Business,
+                               Location, Answer, Agree, Follower)
+        values (#{id},#{name},#{sex},#{introduction},#{school},#{company},#{job},#{business}
+        ,#{location},#{answer},#{agree},#{follower})
+    </insert>
+    <!-- 查询数量-->
+   <select id="num" resultType="int">
+       SELECT COUNT(ID) AS Num FROM zhihuuser
+   </select>
+    <!-- 是否存在表 不存在则创建-->
+    <update id="isExist">
+        CREATE  TABLE IF NOT EXISTS ZhiHuUser (ID nvarchar(128) PRIMARY KEY NOT NULL, Name nvarchar(32) NOT NULL,
+         Sex nvarchar(6) NOT NULL, Introduction nvarchar(600) NULL, School nvarchar(100) NULL,
+        Company nvarchar(100) NULL, Job nvarchar(100) NULL, Business nvarchar(32) NULL,
+        Location nvarchar(100) NULL, Answer int NOT NULL, Agree int NOT NULL, Follower int NOT NULL)
+    </update>
+</mapper>
