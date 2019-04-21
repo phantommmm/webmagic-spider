@@ -27,7 +27,9 @@
 ### 效果展示 
 爬取过程
 ![爬取过程](https://github.com/phantommmm/webmagic-spider/blob/master/img/working.png)
+
 知乎职业分布
 ![知乎职业分布](https://github.com/phantommmm/webmagic-spider/blob/master/img/business.png)
+
 知乎地域分布
 ![知乎地域分布](https://github.com/phantommmm/webmagic-spider/blob/master/img/location.png)
