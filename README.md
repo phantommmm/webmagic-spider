@@ -23,3 +23,10 @@
 代理爬虫入口: [Pool.java](https://github.com/phantommmm/webmagic-spider/blob/master/src/main/java/pool/Pool.java)
 
 主程序入口: [SpiderStart.java](https://github.com/phantommmm/webmagic-spider/blob/master/src/main/java/spider/SpiderStart.java)
+
+### 效果展示
+[爬取过程](https://github.com/phantommmm/webmagic-spider/blob/master/img/working.png)
+
+[知乎职业分布](https://github.com/phantommmm/webmagic-spider/blob/master/img/business.png)
+
+[知乎地域分布](https://github.com/phantommmm/webmagic-spider/blob/master/img/location.png)
