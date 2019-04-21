@@ -24,6 +24,10 @@
 
 主程序入口: [SpiderStart.java](https://github.com/phantommmm/webmagic-spider/blob/master/src/main/java/spider/SpiderStart.java)
 
+## 程序分析
+从一个知乎用户开始，获取其关注列表，再分别爬取关注列表的用户，不断循环下去
+主要逻辑类: [MyProcessor.java](https://github.com/phantommmm/webmagic-spider/blob/master/src/main/java/webmagic/MyProcessor.java)
+
 ### 效果展示 
 爬取过程
 ![爬取过程](https://github.com/phantommmm/webmagic-spider/blob/master/img/working.png)
