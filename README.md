@@ -14,7 +14,8 @@
 *  线程休眠随机时间，被封后随机时间重启，模拟人工访问
 
 ## 配置
-初次运行请配置 [jdbc.properties]  (https://github.com/phantommmm/webmagic-spider/blob/master/config/jdbc.properties)和[useragent.txt] (https://github.com/phantommmm/webmagic-spider/blob/master/config/useragent.txt)
+初次运行请配置 [jdbc.properties]  (https://github.com/phantommmm/webmagic-spider/blob/master/config/jdbc.properties)
+和 [useragent.txt] (https://github.com/phantommmm/webmagic-spider/blob/master/config/useragent.txt)
 
 ## 运行
 先运行代理爬虫，再运行主程序
